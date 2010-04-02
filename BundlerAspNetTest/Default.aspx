@@ -18,9 +18,13 @@
                 .Add("~/css/testdotless.css.less")
                 .WithMedia("screen")
                 .Render("~/css/combined.css") %>
+    <%= Bundle.Resx()
+                .Add("~/resx/Resource1.resx")
+                .Add("~/resx/Resource2.resx")
+                .Render("~/resx/combined.js")%>
     <form id="form1" runat="server">
     <div>
-    
+        <input type="button" onclick="javascript:alert(Resource1.String1 + ' ' + Resource1.String2 + ' ' + Resource2.String1 + ' ' + Resource2.String2)" value="ResxBundler Click Me!" />
     </div>
     </form>
 </body>

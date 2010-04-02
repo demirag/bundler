@@ -1,5 +1,6 @@
 using Bundler.Framework.Css;
 using Bundler.Framework.JavaScript;
+using Bundler.Framework.Resx;
 
 namespace Bundler.Framework
 {
@@ -13,6 +14,11 @@ namespace Bundler.Framework
         public static ICssBundle Css()
         {
             return new CssBundle();
+        }
+
+        public static IResxBundle Resx()
+        {
+            return new ResxBundle();
         }
     }
 }
